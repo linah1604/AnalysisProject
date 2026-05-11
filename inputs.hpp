@@ -43,5 +43,8 @@ struct orderItems{
     bool required_labeling;
 };
 
+// added after realizing we need to track the amount of workers and orders for the output 2d vector
 vector<worker> workers;
 vector<orders> orderList;
+// added after realizing that we need to track the days left for each order, which will be updated as we assign hours to workers
+vector<int> days;
