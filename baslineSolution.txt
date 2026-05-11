@@ -1,0 +1,18 @@
+
+Problem idea: we want to assign workers to orders over several days. The output is a days vector, where each day contains 
+a 2D matrix: dayWorkerOrderHours[day][worker][order]
+
+the value stored is the number of hours assigned to a worker for an order on that day
+
+- use a greedy algorithm
+- the algorithm gives priority to urgent orders first, then tries to assign the most suitable multi-skilled workers
+- this is useful because a multi-skilled worker can cover several required skills for the same order minimizing the workers 
+per order hence allowing for more workers to work on other orders simultaneously and can reduce completion time
+- for example, if an order requires packing, quality inspection, and labeling, a worker who has all three skills can work 
+on the order alone
+
+baseline solution steps:
+
+1. create the 3D vector: dayWorkerOrderHours[days][workers][orders] and initialize all values to 0
+
+2. 
