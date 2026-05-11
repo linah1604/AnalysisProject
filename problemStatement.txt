@@ -1,0 +1,17 @@
+A furniture warehouse receives daily customer orders that must be packed and prepared for shipment within predefined deadlines. 
+Orders differ in terms of item type, quantity, and size, which affects their handling difficulty and required worker skills. 
+To standardize the system, each item will be classified into one of three complexity levels (low, medium, or high) based on the handling difficulty and required workers. 
+In addition, orders may require one or more specialized skills such as heavy-item handling, packing, quality inspection, or labelling.
+Certain items, particularly heavy items, will require multiple workers working simultaneously to ensure efficient handling. 
+The number of workers required for each order is predefined depending on the item’s difficulty and required skill.
+
+
+The warehouse operates with a limited workforce distributed across daily shifts. Each worker has:
+Certified skills (Heavy item lifting, Packing, quality inspection, and labeling before delivery)
+Worktime and overtime (Must not exceed maximum worktime per worker per day and must consider worker availability)
+
+The objective of the problem is to determine an optimal worker assignment and scheduling plan such that:
+1. All orders are complete to be sent out on time
+2. Orders requiring teamwork are assigned teams with the required skills
+3. Worker availability constraints are satisfied
+4. Completion time is minimized
