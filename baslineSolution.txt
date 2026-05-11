@@ -15,4 +15,33 @@ baseline solution steps:
 
 1. create the 3D vector: dayWorkerOrderHours[days][workers][orders] and initialize all values to 0
 
-2. 
+2. sort orders by: earliest deadline first and if deadlines are equal, higher priority first
+
+3. for each order that is not completed: check if the order can still be completed before its deadline.
+
+4. loop over the sorted orders and allocate the workers depending on wether the worker is suitable or no 
+    so basically take or leav the worker
+    a worker is a good candidate if:
+   - the worker has the required skills
+   - the worker still has available hours today
+   - the worker is not already working on another order at the same time
+perferable to check multi-skilled workers first
+
+5. if one worker covers all required skills and the order only needs one worker then assign as many hours as possible
+
+6. if the order requires teamwork choose the smallest possible team that satisfies:
+   - all required skills are covered
+   - number of workers is at least required_workers
+   - each worker has available hours
+
+7. split the remaining order hours between the selected workers
+   a simple split is equal hours between workers and if workers have different efficiency rates greedily 
+   choose the highest efficiency rates descendingly
+
+8. update: worker used hours, order remaining hours, dayWorkerOrderHours[day][worker][order]
+
+9. for each day decrement deadline_days_left
+
+10. base cade: order completed if remaining_hours <= 0
+
+11. solution valid if completion_time < original_deadline_days_left * 24
