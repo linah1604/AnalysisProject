@@ -1,5 +1,7 @@
 #include <iostream>
+#include <vector>
 using namespace std;
+
 
 struct worker {
     int worker_id;
@@ -40,3 +42,6 @@ struct orderItems{
     bool required_quality_inspection;
     bool required_labeling;
 };
+
+vector<worker> workers;
+vector<orders> orderList;
