@@ -1,0 +1,34 @@
+order_id,item_name,item_quantity,processing_time_per_item_hours,requires_heavy_item_lifting,requires_packing,requires_quality_inspection,requires_labeling_before_delivery
+O01,Chair,4,0.35,0,1,1,1
+O01,Coffee table,1,1.0,0,1,1,1
+O02,Office desk,2,1.4,0,1,1,1
+O02,Office chair,2,0.6,0,1,1,1
+O02,Small drawer unit,1,0.6,0,1,1,1
+O03,Large sofa,1,3.0,1,1,1,1
+O03,Side table,2,0.7,0,1,1,1
+O03,TV unit,1,1.4,1,1,1,1
+O04,Dining table,1,3.2,1,1,1,1
+O04,Dining chair,6,0.45,0,1,1,1
+O04,Display cabinet,1,2.1,1,1,1,1
+O05,Bed frame,1,2.2,1,1,1,1
+O05,Nightstand,2,0.7,0,1,1,1
+O05,Dressing mirror,1,1.4,0,1,1,1
+O06,Nightstand,2,0.7,0,1,1,1
+O06,Small shelf,1,0.6,0,1,1,1
+O07,Heavy wardrobe,1,4.5,1,1,1,1
+O07,Storage cabinet,2,2.1,1,1,1,1
+O08,Kitchen cabinet,3,1.6,1,1,1,1
+O08,Wall shelf,2,0.7,0,1,1,1
+O09,Bed frame,1,2.2,1,1,1,1
+O09,Wardrobe,1,3.8,1,1,1,1
+O09,Nightstand,2,0.7,0,1,1,1
+O09,Dressing table,1,1.8,1,1,1,1
+O10,Side table,2,0.7,0,1,1,1
+O10,Small shelf,2,0.6,0,1,1,1
+O11,TV unit,1,1.7,1,1,1,1
+O11,Storage drawer,2,1.2,0,1,1,1
+O12,Large sofa,2,3.0,1,1,1,1
+O12,Dining table,1,3.2,1,1,1,1
+O12,Dining chair,8,0.45,0,1,1,1
+O12,Wardrobe,1,3.8,1,1,1,1
+O12,Coffee table,2,1.0,0,1,1,1

@@ -1,0 +1,13 @@
+order_id,order_name,complexity,required_workers,deadline_days_left,priority,total_item_quantity,estimated_total_processing_time_hours,requires_heavy_item_lifting,requires_packing,requires_quality_inspection,requires_labeling_before_delivery,test_case_label
+O01,Small apartment starter order,LOW,1,4,1,1,2.4,0,1,1,1,TC01_SIMPLE
+O02,Home office order,MEDIUM,1,5,2,2,4.6,0,1,1,1,TC02_MIXED
+O03,Living room heavy furniture order,HIGH,2,4,3,4,7.8,1,1,1,1,TC03_TEAM
+O04,Dining room full set,HIGH,3,6,3,7,9.5,1,1,1,1,TC03_TEAM
+O05,Bedroom essentials order,MEDIUM,2,3,2,4,6.2,1,1,1,1,TC02_MIXED
+O06,Urgent small delivery order,LOW,1,1,1,3,2.0,0,1,1,1,TC05_TIGHT_DEADLINE
+O07,Large wardrobe and storage order,HIGH,3,5,3,3,8.7,1,1,1,1,TC03_TEAM
+O08,Kitchen storage order,MEDIUM,2,4,2,5,6.8,1,1,1,1,TC04_LIMITED_SKILLS
+O09,Full bedroom set,HIGH,3,6,3,6,11.0,1,1,1,1,TC06_HIGH_WORKLOAD
+O10,Simple living room accessories,LOW,1,2,1,4,3.1,0,1,1,1,TC01_SIMPLE
+O11,TV and storage unit order,MEDIUM,2,2,2,4,5.7,1,1,1,1,TC05_TIGHT_DEADLINE
+O12,Large villa mixed furniture order,HIGH,3,7,3,10,15.5,1,1,1,1,TC06_HIGH_WORKLOAD
