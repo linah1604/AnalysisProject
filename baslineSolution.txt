@@ -45,3 +45,22 @@ perferable to check multi-skilled workers first
 10. base cade: order completed if remaining_hours <= 0
 
 11. solution valid if completion_time < original_deadline_days_left * 24
+
+solution correct because:
+1. checks the main constraints before assigning hours
+it makes sure that:
+2. worker is only assigned if they have the required skill
+3. worker does not exceed daily working limits
+4. orders are handled before their deadline by always choosing urgent orders first , allowing for all orders to be completed 
+5. multi-skilled workers are preferred, reducing completion time 
+
+how its limited because:
+1. may fail to find a valid solution even if one exists, because it does not try all possibilities
+2. does not minimize cost since a cheaper worker may be ignored if another worker has more skills
+3. does not fully optimize completion time it only tries to finish urgent orders first
+3. and the most important limitation since it could jeopardize the answer is it does not handle exact 
+start and end times inside the day, only total daily assigned hours so it cannot fully guarantee 
+that two tasks are not overlapping at a specific time
+
+It's a good greedy solution however its not optimal a better future solution could use 
+dp or backtracking to minimize total completion time and cost
