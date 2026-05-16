@@ -39,8 +39,6 @@ On success the schedule is printed to stdout. On failure the program prints a me
 
 | File | Time | Space |
 |---|---|---|
-| `inputs.hpp` | O(1) | O(1) |
-| `outputs.hpp` | O(1) | O(1) |
 | `scheduler.cpp` | O((K·T)^O) worst case | O(W·T + O) |
 
 Where O = orders, W = workers, T = hourly time slots, K = feasible teams per order.
