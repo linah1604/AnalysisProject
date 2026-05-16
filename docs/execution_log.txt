@@ -1,0 +1,43 @@
+Execution log — reduced dataset (4 orders, 5 workers)
+======================================================
+
+Dataset used
+------------
+Workers: W01 Ahmed, W02 Mona, W03 Youssef, W07 Karim, W09 Hassan
+Orders:
+  O06  Urgent small delivery order    LOW     1 worker  deadline 1 day
+  O10  Simple living room accessories LOW     1 worker  deadline 2 days
+  O05  Bedroom essentials order       MEDIUM  2 workers deadline 3 days
+  O03  Living room heavy furniture    HIGH    2 workers deadline 4 days
+
+Command
+-------
+g++ -std=c++17 scheduler.cpp -o scheduler
+./scheduler     # workers.csv and orders.csv pointing to the reduced dataset
+
+Output
+------
+valid schedule found
+
+day 1, 0:00-3:00 | O05 | duration 3h | team W03(Youssef), W09(Hassan)
+day 1, 0:00-2:00 | O06 | duration 2h | team W01(Ahmed)
+day 1, 0:00-3:00 | O10 | duration 3h | team W07(Karim)
+day 1, 2:00-6:00 | O03 | duration 4h | team W01(Ahmed), W02(Mona)
+
+worker daily hours
+W01 Ahmed: day 1=6h
+W02 Mona: day 1=4h
+W03 Youssef: day 1=3h
+W07 Karim: day 1=3h
+W09 Hassan: day 1=3h
+
+Exit code: 0
+
+Notes
+-----
+- O06 (tight deadline) was scheduled first due to earliest-deadline-first ordering.
+- O05 and O10 were placed in parallel on day 1 using non-overlapping worker sets.
+- O03 (heavy furniture, 2 workers) started at hour 2 after Ahmed finished O06.
+- All 4 orders completed on day 1, well within their respective deadlines.
+- Duration for O05: ceil(6.2 / (0.9 + 1.2)) = ceil(6.2 / 2.1) = 3h
+- Duration for O03: ceil(7.8 / (1.0 + 1.15)) = ceil(7.8 / 2.15) = 4h
